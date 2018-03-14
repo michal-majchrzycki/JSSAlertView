@@ -175,12 +175,16 @@ open class JSSAlertView: UIViewController {
 			let buttonX = buttonWidth == alertWidth ? 0 : buttonWidth
 			dismissButton.frame = CGRect(x: buttonX, y: yPos, width: buttonWidth, height: buttonHeight)
 			if buttonLabel != nil {
-				buttonLabel.frame = CGRect(x: padding, y: (buttonHeight / 2) - 15, width: buttonWidth - (padding * 2), height: 30)
+				buttonLabel.frame = CGRect(x: buttonWidth - (padding * 9), y: (buttonHeight / 2) - 15, width: 70, height: 30)
 			}
 
 			// set button fonts
 			if buttonLabel != nil {
-				buttonLabel.font = UIFont(name: buttonFont, size: 20)
+				buttonLabel.font = UIFont(name: buttonFont, size: 15)
+                buttonLabel.textColor = UIColor(red:1.00, green:0.78, blue:0.21, alpha:1.0)
+                buttonLabel.layer.borderColor = UIColor(red:1.00, green:0.78, blue:0.21, alpha:1.0).cgColor
+                buttonLabel.layer.cornerRadius = 15
+                buttonLabel.layer.borderWidth = 1
 			}
 			if cancelButtonLabel != nil {
 				cancelButtonLabel.font = UIFont(name: buttonFont, size: 20)
@@ -254,6 +258,8 @@ open class JSSAlertView: UIViewController {
 		alertBackgroundView = UIView()
 		alertBackgroundView.backgroundColor = baseColor
 		alertBackgroundView.layer.cornerRadius = 4
+        alertBackgroundView.layer.borderColor = UIColor(red:1.00, green:0.78, blue:0.21, alpha:1.0).cgColor
+        alertBackgroundView.layer.borderWidth = 1
 		alertBackgroundView.layer.masksToBounds = true
 		containerView.addSubview(alertBackgroundView!)
 
