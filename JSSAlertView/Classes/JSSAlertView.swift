@@ -52,7 +52,7 @@ open class JSSAlertView: UIViewController {
 	var buttonFont = "HelveticaNeue-Bold"
     var timerFont = "HelveticaNeue"
 
-	var defaultColor = UIColorFromHex(0xF2F4F4, alpha: 1)
+	var defaultColor = UIColorFromHex(0x000000, alpha: 1)
 
 
 	var darkTextColor = UIColorFromHex(0x000000, alpha: 0.75)
