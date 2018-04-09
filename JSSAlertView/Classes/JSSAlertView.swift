@@ -187,7 +187,7 @@ open class JSSAlertView: UIViewController {
                 buttonLabel.layer.borderWidth = 1
 			}
 			if cancelButtonLabel != nil {
-				cancelButtonLabel.font = UIFont(name: buttonFont, size: 20)
+				cancelButtonLabel.font = UIFont(name: buttonFont, size: 17)
 			}
 			yPos += buttonHeight
 		}else{
@@ -275,7 +275,7 @@ open class JSSAlertView: UIViewController {
 		titleLabel.textColor = textColor
 		titleLabel.numberOfLines = 0
 		titleLabel.textAlignment = .center
-		titleLabel.font = UIFont(name: self.titleFont, size: 24)
+		titleLabel.font = UIFont(name: self.titleFont, size: 17)
 		titleLabel.text = title
 		containerView.addSubview(titleLabel)
 
@@ -297,7 +297,7 @@ open class JSSAlertView: UIViewController {
             self.timerLabel = UILabel()
             timerLabel.textAlignment = .center
             self.timeLeft = time
-            self.timerLabel.font = UIFont(name: self.timerFont, size: 27)
+            self.timerLabel.font = UIFont(name: self.timerFont, size: 17)
             self.timerLabel.textColor = textColor
             self.containerView.addSubview(timerLabel)
             configureTimer()
@@ -509,10 +509,10 @@ extension JSSAlertView {
 		switch type {
 		case .title:
 			self.titleFont = fontStr
-			if let font = UIFont(name: self.titleFont, size: 24) {
+			if let font = UIFont(name: self.titleFont, size: 17) {
 				self.titleLabel.font = font
 			} else {
-				self.titleLabel.font = UIFont.systemFont(ofSize: 24)
+				self.titleLabel.font = UIFont.systemFont(ofSize: 17)
 			}
 		case .text:
 			if self.textView != nil {
@@ -525,17 +525,17 @@ extension JSSAlertView {
 			}
 		case .button:
 			self.buttonFont = fontStr
-			if let font = UIFont(name: self.buttonFont, size: 24) {
+			if let font = UIFont(name: self.buttonFont, size: 17) {
 				self.buttonLabel.font = font
 			} else {
-				self.buttonLabel.font = UIFont.systemFont(ofSize: 24)
+				self.buttonLabel.font = UIFont.systemFont(ofSize: 17)
 			}
         case .timer:
             self.timerFont = fontStr
-            if let font = UIFont(name: self.timerFont, size: 27) {
+            if let font = UIFont(name: self.timerFont, size: 17) {
                 self.buttonLabel.font = font
             } else {
-                self.buttonLabel.font = UIFont.systemFont(ofSize: 27)
+                self.buttonLabel.font = UIFont.systemFont(ofSize: 17)
             }
 		}
 		// relayout to account for size changes
